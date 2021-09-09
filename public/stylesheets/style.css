@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -7,6 +6,35 @@ a {
   color: #00b7ff;
 }
 
-h1 {
-  color: 15px;
+.map {
+  height: 500px;
+}
+
+.home {
+  height: 100vh;
+  background-image: url(/images/cafebooks.jpg);
+}
+
+.button {
+  background-color: beige ;
+  color: brown ;
+  border: 2px solid;
+  
+  /* margin-top: 100px; */
+}
+
+.margin {
+  margin-top: 20vh;
+}
+
+.beige {
+  background-color: beige;
+}
+
+.border-brown {
+  border: 2px solid brown;
+}
+
+.list {
+  border-top-width: initial !important;
 }

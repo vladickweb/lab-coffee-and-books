@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+    <div class="col-md-2">
+        <div class="row justify-content-start">
+        <a href="/" class="btn button rounded-pill">BACK</a>
+        </div>
+    </div>
+        <div class="col-md-8">
+            <h2 class="mb-5 text-center">List Places</h2>
+            <hr class="mb-5">
+            <ul class="list-group">
+                {{#each allPlaces}}
+                <li class="list-group-item mb-3 mt-3 pt-5 rounded-pill p-5 beige border-brown mb-5 list">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Name: </h5>
+                            <p>{{name}}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Type: </h5>
+                            <p>{{type}}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row-column">
+                                <a class="btn btn-dark button rounded-pill btn-block  mb-3" href="/places/{{id}}">More Info</a>
+                                <form action="/places/remove" method="POST">
+                                    <input type="text" hidden value="{{id}}" name="id">
+                                    <button class="btn btn-dark btn-block rounded-pill button">
+                                        DELETE
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <figure id="myMap" class="map border-brown"></figure>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./../../js/all-places-map.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key={{API_KEY}}&callback=initMap"></script>
+
+</div>
